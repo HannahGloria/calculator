@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Pressable, Text } from 'react-native';
 import { colors, styles } from '../../config/theme/app-theme';
 
@@ -16,10 +16,10 @@ export const CalculatorButton = ({
     onPress,
 }:Props) => {
   return (
-    <Pressable 
+    <Pressable
         //el parentesis despues de la funcion de flecha es que regreso un obj implicito
         //es decir que no tengo que poner return{} para regresar un objeto
-        onPress={()=> onPress()}
+        onPress={()=> onPress()} //invocando la funcion que llame como argumento
         style={({pressed}) => ({
           ...styles.button,
           backgroundColor: color,
